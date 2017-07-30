@@ -1,0 +1,77 @@
+.anchorPane{
+    -fx-background-color: rgba(163, 96, 236, 0.5);
+
+}
+.label-header {
+    -fx-font-size: 32pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+.button-a1 {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 20, 0 , 1 , 1 );
+}
+.button-a1:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}
+.button-calendar{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 11;
+    -fx-background-radius: 100;
+}
+.button-calendar:pressed{
+    -fx-background-color: deeppink;
+}
+.gridPane{
+    -fx-background-color: white;
+}
+.spinner{
+    -fx-background-color: black;
+}
+
+
+.text-field-head {
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 20, 0 , 1 , 1 );
+
+}
+.calendarHead {
+    -fx-background-color: steelblue;
+
+}
+.calendarPane {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 20, 0 , 1 , 1 );
+    -fx-background-color: steelblue;
+}
+.shadow {
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.3) , 20, 0 , 1 , 1 );
+}
+.areaChart {
+}
+.chart-axis {
+    -fx-tick-label-fill: white;
+}
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+.date-label {
+    -fx-font-family: helvetica;
+}
+.label-week-distance {
+    -fx-text-fill: white;
+    -fx-font-family: helvetica;
+    -fx-font-weight: bold;
+}
+.btn-setDate {
+    -fx-background-radius: 100;
+}
+.btnCal{
+    -fx-background-color: steelblue;
+}
+.lblMonth{
+}

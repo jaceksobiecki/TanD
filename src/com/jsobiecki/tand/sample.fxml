@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="500.0" styleClass="anchorPane" stylesheets="@sheet.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jsobiecki.tand.Controller">
+    <children>
+      <ImageView fitHeight="623.0" fitWidth="500.0">
+         <image>
+            <Image url="@15549a14589707.5628669c64769.png" />
+         </image>
+      </ImageView>
+        <TextField fx:id="timeField" alignment="CENTER" layoutX="29.0" layoutY="27.0" prefHeight="27.0" prefWidth="75.0" promptText="time (min)" styleClass="text-field-head" />
+        <TextField fx:id="distanceField" alignment="CENTER" layoutX="116.0" layoutY="27.0" prefHeight="27.0" prefWidth="101.0" promptText="distance (km)" styleClass="text-field-head" />
+        <Button fx:id="add" layoutX="374.0" layoutY="29.0" mnemonicParsing="false" onAction="#addBtn" styleClass="button-a1" text="Add" />
+          <AnchorPane layoutX="29.0" layoutY="71.0" minHeight="0.0" minWidth="0.0" prefHeight="254.0" prefWidth="337.0" styleClass="calendarPane">
+         <children>
+            <GridPane fx:id="gridPane" alignment="TOP_RIGHT" layoutY="63.0" prefHeight="191.0" prefWidth="337.0" style="-fx-grid-lines-color: white;" styleClass="gridPane" stylesheets="@sheet.css">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <GridPane fx:id="calendarDays" layoutY="40.0" prefHeight="23.0" prefWidth="337.0" styleClass="calendarHead">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="44.0" text="Mon" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="47.0" text="Tue" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="1" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="69.0" text="Wed" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="52.0" text="Thu" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="3" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="48.0" text="Fri" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="4" />
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="55.0" text="Sat" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="54.0" text="Sun" textAlignment="CENTER" textFill="#ffacac" GridPane.columnIndex="6">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Button fx:id="left" layoutX="36.0" layoutY="9.0" mnemonicParsing="false" onAction="#left" prefHeight="21.0" prefWidth="21.0" styleClass="btnCal" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="right" layoutX="141.0" layoutY="9.0" mnemonicParsing="false" onAction="#right" styleClass="btnCal" text="&gt;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblMonth" layoutX="66.0" layoutY="15.0" prefHeight="16.0" prefWidth="75.0" styleClass="lblMonth" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="calYear" layoutX="242.0" layoutY="15.0" text="2017" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+        <Label fx:id="monthDist" layoutX="143.0" layoutY="349.0" styleClass="label-week-distance" text="Distance" />
+        <Label layoutX="59.0" layoutY="349.0" styleClass="label-week-distance" text="This month:" />
+      <GridPane layoutX="393.0" layoutY="134.0" prefHeight="191.0" prefWidth="93.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="week1" alignment="CENTER" prefHeight="17.0" prefWidth="95.0" styleClass="label-week-distance" text="Label" textAlignment="CENTER" />
+            <Label fx:id="week2" alignment="CENTER" prefHeight="17.0" prefWidth="98.0" styleClass="label-week-distance" text="Label" textAlignment="CENTER" GridPane.rowIndex="1" />
+            <Label fx:id="week3" alignment="CENTER" prefHeight="17.0" prefWidth="100.0" styleClass="label-week-distance" text="Label" textAlignment="CENTER" GridPane.rowIndex="2" />
+            <Label fx:id="week4" alignment="CENTER" prefHeight="17.0" prefWidth="107.0" styleClass="label-week-distance" text="Label" textAlignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="week5" alignment="CENTER" prefHeight="17.0" prefWidth="105.0" styleClass="label-week-distance" text="Label" textAlignment="CENTER" GridPane.rowIndex="4" />
+            <Label fx:id="week6" alignment="CENTER" prefHeight="17.0" prefWidth="118.0" styleClass="label-week-distance" text="Label" textAlignment="CENTER" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <AreaChart fx:id="chart" alternativeRowFillVisible="false" animated="false" createSymbols="false" layoutY="376.0" legendVisible="false" prefHeight="224.0" prefWidth="500.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" styleClass="chart-axis" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" side="LEFT" styleClass="chart-axis" />
+        </yAxis>
+         <styleClass>
+            <String fx:value="areaChart" />
+            <String fx:value="chart-series-area-line" />
+         </styleClass>
+      </AreaChart>
+      <Label fx:id="dateLbl" layoutX="265.0" layoutY="30.0" prefHeight="23.0" prefWidth="101.0" styleClass="date-label" text="25 02 2017 " textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ToggleButton fx:id="pickDateBtn" layoutX="234.0" layoutY="27.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="0.0" styleClass="btn-setDate" text="*" />
+      <Label layoutX="403.0" layoutY="111.0" prefHeight="23.0" prefWidth="72.0" text="This week:" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Helvetica Bold" size="14.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
